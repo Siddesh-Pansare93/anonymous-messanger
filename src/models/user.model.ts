@@ -76,3 +76,4 @@ const userSchema: Schema<User> = new Schema({
 //Todo --- underStand the typeScript Syntax of Mongoose 
 const userModel  = (mongoose.models.User as mongoose.Model<User>) || (mongoose.model<User>("User" , userSchema))
 
+export default userModel
