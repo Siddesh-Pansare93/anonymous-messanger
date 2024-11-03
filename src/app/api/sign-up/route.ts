@@ -2,12 +2,12 @@ import { connectToDb } from "@/lib/connectDb";
 import { sendVerificationEmail } from "@/lib/resend";
 import userModel from "@/models/user.model";
 import bcrypt from 'bcryptjs'
+import { NextRequest } from "next/server";
 
-async function POST(request: Request,) {
+async function POST(request: NextRequest) {
     const db = await connectToDb()
 
     try {
-
         const { username, email, password } = await request.json()
 
         //find if the user with the same userName exists and also checks that is it is verified  
