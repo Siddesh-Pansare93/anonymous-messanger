@@ -20,7 +20,7 @@ export const authOptions: NextAuthOptions = {
                 try {
                     // Check if credentials are defined
                     if (!credentials || !credentials.email || !credentials.password) {
-                        throw new Error("Email and password are required");
+                        throw new Error("Email and password are required"); 
                     }
 
 
@@ -33,6 +33,7 @@ export const authOptions: NextAuthOptions = {
                     })
 
                     if (!user) {
+                        
                         throw new Error("No user found with this email")
                     }
 
